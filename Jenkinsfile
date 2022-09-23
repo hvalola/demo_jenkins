@@ -26,5 +26,12 @@ pipeline{
                 echo 'deploying the application'
             }
         }
+        stage('Build docker image'){
+            steps{
+                script{
+                    sh 'docker build -t pubudurana/demo_jenkins .'
+                }
+            }
+        }
 	}
 }
