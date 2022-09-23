@@ -29,6 +29,8 @@ pipeline{
         stage('Build docker image'){
             steps{
                 script{
+                    def dockerHome = tool 'demo-docker'
+                    env.PATH = "${dockerHome}/bin:${env.PATH}"
                     sh 'docker build -t pubudurana/demo_jenkins .'
                 }
             }
