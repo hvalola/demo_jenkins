@@ -1,4 +1,4 @@
 FROM openjdk:11
 EXPOSE 8090
-ADD target/demo_jenkins.jar demo_jenkins.jar
-ENTRYPOINT ["java","-jar","/devops-integration.jar"]
+ADD target/demo-0.0.1-SNAPSHOT.jar.jar demo_jenkins.jar
+ENTRYPOINT ["java","-jar","/demo_jenkins.jar"]
