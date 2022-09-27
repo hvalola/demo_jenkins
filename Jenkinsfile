@@ -42,5 +42,12 @@ pipeline{
                 sh 'docker push pubudurana/demo_jenkins'
             }
         }
+
+        stage('redploy from dockerhub'){
+                    steps{
+                        echo 'pushing  the application to dockerhub'
+                        sh 'docker run pubudurana/demo_jenkins'
+                    }
+                }
 	}
 }
