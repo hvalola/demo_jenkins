@@ -31,9 +31,15 @@ pipeline{
                 script{
                     def dockerHome = tool 'demo-docker'
                     env.PATH = "${dockerHome}/bin:${env.PATH}"
-                    sh 'sudo docker build -t pubudurana/demo_jenkins .'
+                    sh 'docker build -t pubudurana/demo_jenkins .'
                 }
             }
         }
+         stage('push to dockerhub'){
+                    steps{
+                        echo 'pushing  the application to dockerhub'
+                         sh 'docker push pubudurana/demo_jenkins .'
+                    }
+                }
 	}
 }
