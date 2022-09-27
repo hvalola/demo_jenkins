@@ -38,8 +38,6 @@ pipeline{
         stage('push to dockerhub'){
             steps{
                 echo 'pushing  the application to dockerhub'
-                	withCredentials([usernamePassword(credentialsId: 'dockerHub', passwordVariable: 'Lilani@123', usernameVariable: 'pubudurana')]) {
-                        	sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
                 sh 'docker push pubudurana/demo_jenkins'
             }
         }
