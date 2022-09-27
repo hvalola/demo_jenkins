@@ -36,9 +36,9 @@ pipeline{
             }
         }
          stage('push to dockerhub'){
-                    steps{
-                        echo 'pushing  the application to dockerhub'
-                    }
-                }
+            steps{
+                echo 'pushing  the application to dockerhub'
+            }
+        }
 	}
 }
