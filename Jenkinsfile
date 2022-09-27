@@ -38,7 +38,6 @@ pipeline{
          stage('push to dockerhub'){
                     steps{
                         echo 'pushing  the application to dockerhub'
-                         sh 'docker push pubudurana/demo_jenkins .'
                     }
                 }
 	}
